@@ -1,0 +1,8 @@
+.search-results{
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+    &__container{
+        padding: 25px 25px 25px 26px;
+    }
+}

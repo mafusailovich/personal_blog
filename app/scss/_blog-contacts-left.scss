@@ -1,0 +1,83 @@
+.blog-contacts {
+    background-color: #202020;
+    box-shadow: 5px 0px 15px 0px #0505051A;
+    min-height: 2208px;
+    &__content{
+        position: relative;
+        max-width: 300px;
+    }
+    &__desk {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        margin-bottom: 69px;
+    }
+    &__rolan {
+        position: absolute;
+        top:117px;
+        left:78px;
+    }
+    &__title{
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 21.09px;
+        text-align: center;
+        margin-bottom: 3px;
+    }
+    &__subtitle{
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 16.41px;
+        text-align: center;
+        color: #DEDEDE;
+        margin-bottom: 19px;
+    }
+    &__social{
+        max-width: 65px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 58px;
+    }
+    &__text{
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 18px;
+        text-align: center;
+        margin:0px auto 60px auto;
+        max-width: 260px;
+
+    }
+    &__links{
+        margin: 0px 15px 0px 25px;
+    }
+}
+
+.contacts-links{
+    max-width:260px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__link{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 120px;
+        height: 40px;
+        border-radius: 25px;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 14.06px;
+        text-align: center;
+        color: inherit;
+    }
+    &--orange{
+        background-color: #ED3024;
+        box-shadow: 0px 7px 17px -10px #F23F3F33;
+    }
+    &--blue{
+        background-color: #3137C9;
+        box-shadow: 0px 7px 17px -10px #2054DB59;
+    }
+}

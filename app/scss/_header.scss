@@ -1,0 +1,20 @@
+.blog-header{
+    background-color: #0D0D0D;
+    box-shadow: 0px 5px 22px 0px #00000040;
+    padding-left: 15px;
+    &__menu{
+        max-width: 700px;
+        height: 40px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    &__link{
+        display: block;
+        margin-right: 23px;
+        font-size: 11px;
+        line-height: 12.89px;
+        color: inherit;
+        text-transform: uppercase;
+    }
+}

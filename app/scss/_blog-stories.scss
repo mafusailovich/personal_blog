@@ -1,0 +1,31 @@
+.blog-stories{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 13px;
+    &__item{
+        display: block;
+        position: relative;
+        color: inherit;
+    }
+    &__img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    &__text{
+        max-width: 110px;
+        position: absolute;
+        top:14px;
+        left: 13px;
+        @extend %stories_dates;
+        padding-right: 10px;
+    }
+    &__date{
+        max-width: 61px;
+        position: absolute;
+        bottom: 12px;
+        right: 16px;
+        @extend %stories_dates;
+    }
+
+}

@@ -1,0 +1,24 @@
+.blog-pagination {
+    max-width: 240px;
+    height: 40px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 10px;
+    &__item{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 3px;
+        background: #0D0D0D;
+        box-shadow: 0px 0px 10px 0px #00000026;
+        font-size: 14px;
+        line-height: 16.41px;
+        cursor: pointer;
+    }
+    &--active{
+        background: #104BE3;
+        box-shadow: 0px 0px 10px 0px #3A6CEA26;
+    }
+}
