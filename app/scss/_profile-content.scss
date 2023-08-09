@@ -1,0 +1,31 @@
+.profile{
+    &__title{
+        margin-bottom: 60px;
+    }
+    &__input{
+        display: grid;
+        grid-template-columns: 340px 150px;
+        column-gap: 110px;
+    }
+    &__input-field{
+        @extend %inputs;
+    }
+    &__avatar-img{
+        width: 150px;
+        height: 150px;
+        margin-bottom: 15px;
+        background-color:#C4C4C4;
+        box-shadow: 0px 5px 15px 0px #00000040;
+    }
+    &__avatar-input{
+        display: none;
+    }
+    &__avatar-label{
+        @extend %inputs-text;
+        color:#107EFF;
+        cursor: pointer;
+    }
+    &__submit{
+        @extend %submit-buttons;
+    }
+}

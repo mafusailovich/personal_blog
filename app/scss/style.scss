@@ -1,10 +1,79 @@
 @import "nullst.scss";
 
+%for-modals {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(128, 128, 128, 0.4);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s linear 0.2s;
+}
+%for-modal-body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 10px;
+}
+%for-modal-content {
+    position: relative;
+    max-width: 500px;
+    width: 100%;
+    padding: 81px 80px 25px;
+    background-color: #202020;
+    box-shadow: 0px 10px 35px 0px #00000040;
+    border-radius: 5px;
+}
+
 %stories_dates {
     font-family: "Lato";
     font-weight: 400;
     font-size: 12px;
     line-height: 14.4px;
+}
+
+%inputs-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16.41px;
+}
+
+%inputs {
+    display: block;
+    width: 100%;
+    height: 27px;
+    border-bottom: 1px solid #3f3f3f;
+    background-color: #ffffff00;
+    color: #fff;
+    margin-bottom: 25px;
+    padding-bottom: 9px;
+    @extend %inputs-text;
+    &::placeholder {
+        @extend %inputs-text;
+        color: #ffffff33;
+    }
+    &--blue {
+        border-bottom: 1px solid #107eff;
+        padding-bottom: 11px;
+    }
+}
+
+%buttons-text {
+    font-size: 12px;
+    line-height: 14.4px;
+    color: #fff;
+}
+
+%submit-buttons {
+    padding: 8px 15px;
+    border-radius: 5px;
+    background-color: #3137c9;
+    box-shadow: 0px 4px 15px -7px #3037c94d;
+    font-weight: 400;
+    @extend %buttons-text;
 }
 
 body {
@@ -46,10 +115,7 @@ body {
     align-items: center;
     column-gap: 15px;
     &__date {
-        font-family: "Lato";
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 14.4px;
+        @extend %stories_dates;
         color: #828282;
     }
     &__circle {
@@ -73,7 +139,7 @@ body {
     color: #d2d2d2;
 }
 
-.article-subtitle{
+.article-subtitle {
     font-weight: 500;
     font-size: 16px;
     line-height: 18.75px;
@@ -95,7 +161,5 @@ body {
     display: none;
 }
 
-@import "fonts", "blog-contacts-left",
-"header", "blog-paginate",
-"blog-stories", "blog-articles", "only-article",
-"search-results", "works";
+@import "fonts", "blog-contacts-left", "header", "blog-paginate", "blog-stories", "blog-articles", "only-article",
+    "search-results", "works", "profile-content", "auth-content", "modal-contacts", "modal-share";

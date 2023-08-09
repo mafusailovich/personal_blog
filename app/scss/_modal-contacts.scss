@@ -1,0 +1,53 @@
+.modal-contacts {
+    @extend %for-modals;
+    &__body{
+        @extend %for-modal-body;
+    }
+    &__content {
+        @extend %for-modal-content;
+    }
+    &__close {
+        background-image: url("/images/modal-contacts/close.svg");
+        background-repeat: no-repeat;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top:20px;
+        right: 20px;
+
+    }
+    &:target{
+        opacity: 1;
+        visibility: visible;
+    }
+    &__form {
+        margin-bottom: 39px;
+    }
+    &__input {
+        @extend %inputs;
+        &--blue {
+            border-bottom: 1px solid #107eff;
+            padding-bottom: 4px;
+        }
+    }
+    &__button {
+        @extend %submit-buttons;
+    }
+    &__menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__item {
+        font-size: 12px;
+        line-height: 16px;
+        color: #b3b3b3;
+        &:first-child{
+            margin-right: 15px;
+        }
+    }
+    &__item a {
+        color: inherit;
+        text-decoration: underline;
+    }
+}

@@ -1,0 +1,28 @@
+<div class="profile">
+    <h1 class="profile__title other-title">Профиль</h1>
+    <form class="profile__data" action="#">
+        <div class="profile__input">
+            <div class="profile__data-input">
+                <input class="profile__input-field profile__input-field--blue" type="text" name="name" id="name"
+                    placeholder="Имя Фамилия" value="Александр Провостин">
+                <input class="profile__input-field" type="text" name="surname" id="surname"
+                    placeholder="E-mail" value="alex.provo@mail.com">
+                <input class="profile__input-field" type="password" name="pass" id="pass" placeholder="Новый пароль">
+                <input class="profile__input-field" type="password" name="confpass" id="confpass" placeholder="Подтвердите пароль">
+            </div>
+            <div class="profile__avatar">
+                <img class="profile__avatar-img" src="/images/profile/avatar.png" alt="avatar" width="150px" height="150px">
+                <input
+                    class="profile__avatar-input"
+                    type="file"
+                    accept=".jpg, .jpeg, .png, .bmp"
+                    name="choose-avatar"
+                    id="choose-avatar">
+                <label class="profile__avatar-label" for="choose-avatar">
+                    выбрать аватар
+                </label>
+            </div>
+        </div>
+        <button class="profile__submit" type="submit">Сохранить</button>
+    </form>
+</div>

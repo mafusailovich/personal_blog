@@ -1,0 +1,29 @@
+.auth {
+    &__title {
+        text-align: center;
+        margin-bottom: 59px;
+    }
+    &__inputs {
+        margin: 0 auto;
+        max-width: 280px;
+        margin-bottom: 20px;
+    }
+    &__input{
+        @extend %inputs;
+    }
+    &__submit {
+        @extend %submit-buttons;
+        display: block;
+        margin: 0 auto;
+    }
+    &__bottom{
+        max-width: 159px;
+        margin: 0 auto;
+    }
+    &__forget{
+        @extend %buttons-text;
+        &:first-child{
+            margin-right: 6px;
+        }
+    }
+}

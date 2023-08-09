@@ -35,7 +35,7 @@
                         различной сложности.</p>
                     <div class="blog-contacts__links contacts-links">
                         <a class="contacts-links__link contacts-links--orange" href="#">Мои работы</a>
-                        <a class="contacts-links__link contacts-links--blue " href="#">Написать мне</a>
+                        <a class="contacts-links__link contacts-links--blue " href="#modal-contacts">Написать мне</a>
                     </div>
                 </div>
             </aside>
@@ -45,6 +45,7 @@
                         <a class="blog-header__link" href="#">Главная</a>
                         <a class="blog-header__link" href="#">Обо мне</a>
                     </nav>
+
                 </header>
                 <main class="blog-main">
                     <div class="blog-main__content">
@@ -104,7 +105,11 @@
                                     placeholder="Напишите что-нибудь">
                     
                                 <div class="blog-articles__upload">
-                                    <input class="blog-articles__upload-input" type="file" name="file"
+                                    <input
+                                        class="blog-articles__upload-input"
+                                        type="file"
+                                        name="upload-input"
+                                        accept=".jpg, .jpeg, .png, .bmp, .gif"
                                         id="upload-input">
                                     <label class="blog-articles__upload-label" for="upload-input">
                                         <img src="/images/index_content/photo_btn.svg" alt="Photo">
@@ -184,7 +189,60 @@
         </div>
     </div>
 
+    <div class="modal-contacts" id="modal-contacts">
 
+        <div class="modal-contacts__body">
+
+            <div class="modal-contacts__content">
+
+                <form class="modal-contacts__form" action="#">
+
+                    <input class="modal-contacts__input modal-contacts__input--blue" type="text" placeholder="Имя Фамилия" value="Ролан Закиров">
+
+                    <input class="modal-contacts__input" type="email" placeholder="Ваш e-mail">
+
+                    <input class="modal-contacts__input" type="text" placeholder="Текст сообщения">
+
+                    <button class="modal-contacts__button" type="submit">Отправить</button>
+
+                </form>
+
+                <div class="modal-contacts__menu">
+
+                    <p class="modal-contacts__item">e-mail:<a href="mailto:info@mywebsite.ru">info@mywebsite.ru</a></p>
+
+                    <p class="modal-contacts__item">тел:<a href="tel:+943-232-856-22">+943-232-856-22</a></p>
+
+                </div>
+
+                <a href="#" class="modal-contacts__close"></a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    
+    <div class="modal-share">
+        <div class="modal-share__body">
+            <div class="modal-share__content">
+                <a href="#" class="modal-share__close"><img src="/images/modal-share/cancel.svg" alt="Close"></a>
+                <div class="modal-share__menu">
+                    <div class="modal-share__github">
+                        <a href="#"><img class="modal-share__menu-item" src="/images/modal-share/GitHub.svg" alt="GitHub"></a>
+                    </div>
+                    <div class="modal-share__social">
+                        <a href="#"><img class="modal-share__menu-item" src="/images/modal-share/facebook.svg" alt="Facebook"></a>
+                        <a href="#"><img class="modal-share__menu-item" src="/images/modal-share/twitter.svg" alt="Twitter"></a>
+                        <a href="#"><img class="modal-share__menu-item" src="/images/modal-share/vk.svg" alt="VK"></a>
+                        <a href="#"><img class="modal-share__menu-item" src="/images/modal-share/copy.svg" alt="Copy"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <script src="js/main.min.js"></script>
 </body>
 

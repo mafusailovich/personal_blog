@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.min.css">
-    <title>Home</title>
+    <title>Auth</title>
 </head>
 
 <body>
@@ -35,7 +35,7 @@
                         различной сложности.</p>
                     <div class="blog-contacts__links contacts-links">
                         <a class="contacts-links__link contacts-links--orange" href="#">Мои работы</a>
-                        <a class="contacts-links__link contacts-links--blue " href="#modal-contacts">Написать мне</a>
+                        <a class="contacts-links__link contacts-links--blue " href="#">Написать мне</a>
                     </div>
                 </div>
             </aside>
@@ -45,17 +45,27 @@
                         <a class="blog-header__link" href="#">Главная</a>
                         <a class="blog-header__link" href="#">Обо мне</a>
                     </nav>
-
                 </header>
                 <main class="blog-main">
-                    <!--=include blog-main-content.html-->
+                    <div class="auth">
+                        <h1 class="auth__title other-title">Профиль</h1>
+                        <form class="auth__inputs" action="#">
+                            <input class="auth__input auth__input--blue" type="text" name="login" id="login" placeholder="Логин" value="alex.provo@mail.com">
+                            <input class="auth__input" type="password" name="passwd" id="passwd" placeholder="Пароль">
+                            <button class="auth__submit" type="submit">Войти</button>
+                        </form>
+                        <div class="auth__bottom">
+                            <a class="auth__forget" href="#">восстановить</a>
+                            <a class="auth__forget" href="#">регистрация</a>
+                        </div>
+                    </div>
+                    
                 </main>
             </div>
         </div>
     </div>
 
-    <!--=include modal-contacts.html-->
-    <!--=include modal-share.html-->
+
     <script src="js/main.min.js"></script>
 </body>
 

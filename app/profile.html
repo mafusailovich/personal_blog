@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.min.css">
-    <title>Home</title>
+    <title>Profile</title>
 </head>
 
 <body>
@@ -35,7 +35,7 @@
                         различной сложности.</p>
                     <div class="blog-contacts__links contacts-links">
                         <a class="contacts-links__link contacts-links--orange" href="#">Мои работы</a>
-                        <a class="contacts-links__link contacts-links--blue " href="#modal-contacts">Написать мне</a>
+                        <a class="contacts-links__link contacts-links--blue " href="#">Написать мне</a>
                     </div>
                 </div>
             </aside>
@@ -45,17 +45,43 @@
                         <a class="blog-header__link" href="#">Главная</a>
                         <a class="blog-header__link" href="#">Обо мне</a>
                     </nav>
-
                 </header>
                 <main class="blog-main">
-                    <!--=include blog-main-content.html-->
+                    <div class="profile">
+                        <h1 class="profile__title other-title">Профиль</h1>
+                        <form class="profile__data" action="#">
+                            <div class="profile__input">
+                                <div class="profile__data-input">
+                                    <input class="profile__input-field profile__input-field--blue" type="text" name="name" id="name"
+                                        placeholder="Имя Фамилия" value="Александр Провостин">
+                                    <input class="profile__input-field" type="text" name="surname" id="surname"
+                                        placeholder="E-mail" value="alex.provo@mail.com">
+                                    <input class="profile__input-field" type="password" name="pass" id="pass" placeholder="Новый пароль">
+                                    <input class="profile__input-field" type="password" name="confpass" id="confpass" placeholder="Подтвердите пароль">
+                                </div>
+                                <div class="profile__avatar">
+                                    <img class="profile__avatar-img" src="/images/profile/avatar.png" alt="avatar" width="150px" height="150px">
+                                    <input
+                                        class="profile__avatar-input"
+                                        type="file"
+                                        accept=".jpg, .jpeg, .png, .bmp"
+                                        name="choose-avatar"
+                                        id="choose-avatar">
+                                    <label class="profile__avatar-label" for="choose-avatar">
+                                        выбрать аватар
+                                    </label>
+                                </div>
+                            </div>
+                            <button class="profile__submit" type="submit">Сохранить</button>
+                        </form>
+                    </div>
+                    
                 </main>
             </div>
         </div>
     </div>
 
-    <!--=include modal-contacts.html-->
-    <!--=include modal-share.html-->
+
     <script src="js/main.min.js"></script>
 </body>
 
