@@ -1,7 +1,9 @@
 .modal-share {
     @extend %for-modals;
-    opacity: 1;
-    visibility: visible;
+    &:target {
+        opacity: 1;
+        visibility: visible;
+    }
     &__body{
         @extend %for-modal-body;
     }

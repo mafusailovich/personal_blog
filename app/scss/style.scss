@@ -2,6 +2,7 @@
 
 %for-modals {
     position: fixed;
+    z-index: 10;
     width: 100%;
     height: 100%;
     top: 0;
@@ -84,22 +85,29 @@ body {
 
 .container {
     max-width: 1000px;
-    min-height: 2208px;
+    min-height: 100vh;
     margin: 0 auto;
     background-color: #181818;
 }
 
 .blog {
     display: grid;
-    grid-template-columns: 300px 700px;
+    grid-template-columns: 300px minmax(300px, 700px);
+
+    @media (max-width:660px){
+        grid-template-columns: minmax(320px, 700px);
+    }
 }
 
 .blog-main {
     padding: 100px 50px 68px 50px;
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    @media (max-width:750px){
+        padding: 20px 15px 50px;
+    }
     &__pagination {
         margin: 0 auto;
     }
@@ -161,5 +169,19 @@ body {
     display: none;
 }
 
+.menu-burger {
+    display: none;
+}
+
+@media (max-width:660px){
+    .blog-header{
+        display: none;
+    }
+    .menu-burger{
+        display: block;
+    }
+}
+
 @import "fonts", "blog-contacts-left", "header", "blog-paginate", "blog-stories", "blog-articles", "only-article",
-    "search-results", "works", "profile-content", "auth-content", "modal-contacts", "modal-share";
+    "search-results", "works", "profile-content", "auth-content", "modal-contacts", "modal-share",
+    "modal-story","menu-burger";

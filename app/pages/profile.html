@@ -4,6 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="favicon_io/site.webmanifest">
+    <link rel="shortcut icon" href="favicon_io/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.min.css">
     <title>Profile</title>
 </head>
@@ -12,40 +17,11 @@
     <div class="container">
         <div class="blog">
             <aside class="blog-contacts">
-                <div class="blog-contacts__content">
-                    <picture>
-                        <source srcset="/images/col_summary/laptopDesk.avif" type="image/avif">
-                        <source srcset="/images/col_summary/laptopDesk.webp" type="image/webp">
-                        <img class="blog-contacts__desk" src="/images/col_summary/laptopDesk.jpg" alt="" width="300px"
-                            height="180px">
-                    </picture>
-                    <img class="blog-contacts__rolan" src="/images/col_summary/Rolan.svg" alt="laptopDesk" width="140px"
-                        height="140px">
-                    <h2 class="blog-contacts__title">Ролан Закиров</h2>
-                    <p class="blog-contacts__subtitle">Front-end разработчик</p>
-                    <div class="blog-contacts__social">
-                        <img class="blog-contacts__social-img" src="/images/col_summary/instagram.svg" alt="Instagram"
-                            width="25px" height="25px">
-                        <img class="blog-contacts__social-img" src="/images/col_summary/vk.svg" alt="VK" width="25px"
-                            height="25px">
-                    </div>
-                    <p class="blog-contacts__text">Front-end разработчик. Практик верстки сайтов. Созданием сайтов
-                        занимаюсь
-                        с 2012 года. Работал в нескольких ИТ компаниях и наработал более 10 000 часов в создании сайтов
-                        различной сложности.</p>
-                    <div class="blog-contacts__links contacts-links">
-                        <a class="contacts-links__link contacts-links--orange" href="#">Мои работы</a>
-                        <a class="contacts-links__link contacts-links--blue " href="#">Написать мне</a>
-                    </div>
-                </div>
+                <!--=include contacts-left.html-->
             </aside>
             <div class="blog__body">
-                <header class="blog-header">
-                    <nav class="blog-header__menu">
-                        <a class="blog-header__link" href="#">Главная</a>
-                        <a class="blog-header__link" href="#">Обо мне</a>
-                    </nav>
-                </header>
+                <!--=include header-menu.html-->
+                <!--=include menu-burger.html-->
                 <main class="blog-main">
                     <!--=include profile-content.html-->
                 </main>
@@ -53,7 +29,9 @@
         </div>
     </div>
 
-
+    <!--=include modal-contacts.html-->
+    <!--=include modal-share.html-->
+    <!--=include modal-story.html-->
     <script src="js/main.min.js"></script>
 </body>
 

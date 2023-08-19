@@ -109,7 +109,9 @@ function building(){
         '!app/images/src/**/*.*',
         '!app/images/dist/sprite.svg',
         'app/fonts/*.*',
-        'app/**/*.html'
+        'app/*.html',
+        'app/favicon_io/*.*',
+        'app/video/*.*'
     ], {base:'app'})
         .pipe(dest('dist'))
 };

@@ -1,7 +1,12 @@
 .blog-contacts {
     background-color: #202020;
     box-shadow: 5px 0px 15px 0px #0505051A;
-    min-height: 2208px;
+    min-height: 100vh;
+    padding-bottom: 20px;
+
+    @media (max-width:660px){
+        display: none;
+    }
     &__content{
         position: relative;
         max-width: 300px;
@@ -39,6 +44,7 @@
         justify-content: space-between;
         align-items: center;
         margin-bottom: 58px;
+        cursor: pointer;
     }
     &__text{
         font-weight: 400;

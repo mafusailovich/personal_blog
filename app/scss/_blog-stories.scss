@@ -1,11 +1,46 @@
 .blog-stories{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 140px);
+    justify-content: center;
     column-gap: 13px;
+
+    @media (max-width:980px){
+        grid-template-columns: repeat(auto-fit, 140px);
+    }
+
+    @media (max-width:400px){
+        grid-template-columns: repeat(2, 140px);
+    }
+
     &__item{
+        cursor: pointer;
         display: block;
         position: relative;
         color: inherit;
+
+        @media (max-width:980px){
+            &:last-child{
+                display: none;
+            }
+        }
+
+        @media (max-width:860px){
+            &:nth-child(3){
+                display: none;
+            }
+        }
+
+        @media (max-width:660px){
+            &:nth-child(3){
+                display: block;
+            }
+        }
+
+        @media (max-width:500px){
+            &:nth-child(3){
+                display: none;
+            }
+        }
     }
     &__img {
         width: 100%;
@@ -27,5 +62,4 @@
         right: 16px;
         @extend %stories_dates;
     }
-
 }

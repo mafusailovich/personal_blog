@@ -13,6 +13,10 @@
         border-radius: 5px;
         position: relative;
         margin-bottom: 30px;
+
+        @media (max-width:400px){
+            display: none;
+        }
     }
     &__text {
         width: 100%;
@@ -50,6 +54,22 @@
     }
     &__article {
         margin-bottom: 30px;
+        &:last-of-type{
+            margin-bottom: 549px;
+        }
+
+        @media (max-width:980px){
+            &:last-of-type{
+                margin-bottom: 50px;
+            }
+        }
+
+        @media (max-width:320px){
+            &:nth-of-type(3){
+                margin-bottom: 50px;
+            }
+        }
+
     }
 }
 
@@ -57,20 +77,48 @@
     background: #202020;
     box-shadow: 0px 15px 25px 0px #00000059;
     border-radius: 5px;
+    &:nth-of-type(2){
+        display: none;
+    }
+    @media (max-width:320px){
+        &:nth-of-type(2){
+            display: block;
+        }
+        &:last-of-type{
+            display: none;
+        }
+    }
     &__container {
         padding: 25px 27.78px 44px 27.78px;
+
+        @media (max-width:320px){
+            padding: 13px 15px 18px 15px;
+        }
     }
     &__text {
         margin-bottom: 15px;
     }
     &__video {
-        position: relative;
-        margin-bottom: 25px;
+        padding: 25px 25px 0px;
+        @media (max-width:320px){
+            padding: 0;
+        }
     }
-    &__img {
+    &__video-container{
+        position: relative;
+        max-height: 280px;
+    }
+    &__video-item, &__img {
         width: 100%;
         height: auto;
+        min-height: 205px;
         object-fit: cover;
+    }
+    &__img-container{
+        background-color:#C4C4C4;
+    }
+    &__round-top{
+        border-radius: 5px 5px 0px 0px;
     }
     &__video-play {
         position: absolute;
@@ -79,9 +127,17 @@
         transform: translate(-50%, -50%);
     }
     &__bottom {
-        display: flex;
+        display: grid;
+        grid-template-columns: 210px 154px;
+        gap:17px;
         justify-content: space-between;
+        justify-items: end;
         align-items: center;
+
+        @media (max-width:870px){
+            grid-template-columns: 1fr;
+            justify-items: start;
+        }
     }
     &__comment {
         font-size: 14px;

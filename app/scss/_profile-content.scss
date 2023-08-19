@@ -4,11 +4,33 @@
     }
     &__input{
         display: grid;
-        grid-template-columns: 340px 150px;
+        grid-template-columns: minmax(150px, 340px) 150px;
         column-gap: 110px;
+
+        @media (max-width:830px){
+            column-gap: 20px;
+        }
+        @media (max-width:660px){
+            column-gap: 110px;
+        }
+        @media (max-width:450px){
+            grid-template-columns: 300px;
+        }
     }
     &__input-field{
         @extend %inputs;
+    }
+    &__data-input{
+        @media (max-width:450px){
+            order:2;
+        }
+    }
+    &__avatar{
+        @media (max-width:450px){
+            max-width: 150px;
+            margin-bottom: 40px;
+            order:1;
+        }
     }
     &__avatar-img{
         width: 150px;
